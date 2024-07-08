@@ -1,0 +1,1077 @@
+@font-face {
+    font-family: 'Nexa-Bold';
+    src: url('../font/Nexa-Bold.eot'); 
+    src: url('../font/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/Nexa-Bold.woff2') format('woff2'), 
+         url('../font/Nexa-Bold.woff') format('woff'),
+         url('../font/Nexa-Bold.ttf')  format('truetype'), 
+        
+  }
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Nexa-Bold", sans-serif !important;
+    background-color: #181025;
+    margin: 0;
+    padding: 0;
+   
+}
+ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    
+}
+a{
+    text-decoration: none;
+}
+.container
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    background-color: #332941;
+    height: 50px;
+}
+header .content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 5px;
+}
+header .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 8px;
+}
+header .links li{
+    text-transform: capitalize;
+    height: 50px;
+    line-height: 50px;
+   
+}
+header .links li a.linkimg{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 10px auto;
+    margin-left: -10px;
+}
+header .links li a.nav{
+    height: 100%;
+    display: block;
+  
+    font-size: 9px;
+    font-weight: 500;
+color: white;
+}
+header .links li.folder{
+    display: block;
+  
+    font-size: 9px;
+    font-weight: 700;
+color: white;
+text-transform: lowercase;
+}
+header .links li a.active{
+   background-color: #181025;
+   padding: 0 10px;
+   color: #8a64fe;
+}
+
+
+header .links img{
+    width: 100%;
+    height: 100%;
+}
+header .right{
+   
+
+}
+header .right .person{
+   background-color: #000;
+border-radius: 5px;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 18px;
+padding: 1px 0;
+/* gap: 5px; */
+}
+header .right .personanimat{
+   position: relative;
+   width: 67px;
+   height: 100%;
+}
+header .right .personanimat canvas{
+   position: absolute;
+    /* background: #111; */
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 113;
+    padding: 0 3px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header .right .person p{
+   margin: 0;
+font-size: 8px;
+padding: 5px;
+padding-left: 0;
+}
+header .right .person .usericon{
+  background-color: #241c31;
+ 
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+padding: 5px;
+color: #09cc6a;
+}
+header .links .folder{
+   
+    height: 60%;
+   
+}
+header .links .folder a{
+    background-color: #8866fb;
+    padding: 5px;
+    border-radius: 5px;
+    height: 60%;
+    color: white;
+   
+ }
+header .links .folder .en{
+    background-color: #241c31;
+   
+ }
+
+ /* start nav  */
+ nav{
+    margin-top: 20px;
+ }
+ nav .content ul{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+ }
+ nav .content ul li a{
+color: white;
+display: block;
+font-size: 9px;
+font-weight: 500;
+position: relative;
+text-transform: capitalize;
+ }
+ 
+ nav .content ul li a.active{
+    position: relative;
+ }
+ nav .content ul li a.active::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #32fc84;
+    bottom: -10px;
+ left: 50%;
+ border-radius: 5px;
+ transform: translateX(-50%);
+ }
+
+
+ .annonce{
+    background-image: linear-gradient(to right,#8f3cee, #557ddd);
+    margin-top: 10px;
+ }
+ .annonce .content, .annonce .content .text,.annonce .content .social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 5px;
+ }
+ .annonce .content .text{
+    gap: 5px;
+ }
+ .annonce .content .text i{
+    font-size: 15px;
+ }
+ .annonce .content .text p{
+font-size: 7px;
+text-transform: capitalize;
+font-weight: 500;
+ }
+ .annonce .content .social{
+font-size: 11px;
+gap: 5px;
+ }
+ .annonce .content .social a{
+    color: white;
+ }
+ /* end nav  */
+ /* start schema  */
+ .schema{
+    margin: 15px 0;
+    margin-top: -10px;
+    z-index: 112;
+    position: relative;
+
+ }
+ .schema .head{
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+
+ }
+ .schema .head h2{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+ }
+ .schema .head .setting,.beta .setting{
+ color: white;
+ background-color: #312842;
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+ }
+ .schema .scemaRank{
+    color: white;
+ }
+ .schema .scemaRank .ranhHead, .schema .scemaRank .rankcontent{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  gap: 8px;
+ }
+ .schema .scemaRank .ranhHead th,.schema .scemaRank td{
+   font-size: 11px;
+text-align: center;
+font-weight: 500;
+text-transform: capitalize;
+ }
+ .schema .scemaRank .rankcontent{
+  
+ }
+ .schema .scemaRank .rankcontent p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .schema .scemaRank .rankcontent p img{
+ width: 25px;
+ height: 25px;
+ }
+ table{
+    color: white;
+    text-align: center;
+    border-collapse:separate; 
+  border-spacing: 0 .5em;
+  /* border-collapse: collapse; */
+  width: 100%;
+  
+ }
+
+ td:first-child,
+ th:first-child {
+   border-radius: 10px 0 0 10px;
+ }
+ td:last-child,
+ th:last-child {
+   border-radius: 0 10px 10px 0;
+ }
+table .ranhHead{
+    height: 50px;
+}
+table th{
+    font-size: 7px;
+
+}
+table td{
+    font-size: 7px;}
+ table th,table td{
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+ }
+ .schema .first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .schema .rankcontent{
+    color: white;
+    background-color: #332941;
+    border-radius: 5px;
+    text-transform: capitalize;
+    
+ }
+ .schema table td i{
+    color: #32fc84;
+ }
+ .schema .rankcontent td{
+    /* padding:0px 5px; */
+ }
+
+ .schema table img{
+    width: 25px;
+    height: 25px;
+    }
+
+ /* end schema  */
+ /* start uschema  */
+ .Uschema{
+    background-color: #332941;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 20px;
+    margin-bottom: 0;
+ }
+ .Uschema .rankcontent{
+    background-color: #241c31;
+ }
+ .Uschema .Ufirst{
+    gap: 10px;
+ }
+ .Uschema .Ufirst img{
+    background-color: #181025;
+    padding: 5px;
+    border-radius: 5px;
+ }
+ .Uschema .first span{
+    margin: 10px 0;
+   
+ }
+ .Uschema .first span :last-child{
+color: #ffffffb0;
+font-size: 7px;
+ }
+ .Uschema .date{
+    color: #ffffffb0;
+    display: block;
+    text-align: end;
+    font-size: 7px;
+    padding-right:15px ;
+ }
+ .Uschema .date span:last-child{
+  display: block;
+  margin-top: 3px;
+ }
+ .Uschema .Ufirst{
+
+ }
+ .Uschema .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+
+ }
+ .Uschema .btn button{
+background-color: #7603ff;
+color: white;
+border: none;
+width: 60%;
+border-radius: 6px;
+padding: 10px 0;
+font-size: 13px;
+font-weight: 500;
+
+ }
+ /* end uschema  */
+ /* master */
+.master{
+   margin-top: 25px;
+}
+.master .content{
+   color: white;
+   
+}
+.master .head{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   text-transform: capitalize;
+}
+.master .head h3,.master .head p{
+   margin: 0;
+
+}
+
+.master .head h3{
+   font-size: 14px;
+}
+.master .head h3 span{
+   color: #1fa15b;
+}
+.master .head p{
+   font-size: 10px ;
+   margin-bottom: 10px;
+}
+.master .masterprogress{
+   background-color: #332941;
+   padding:10px;
+   border-radius: 8px;
+   margin-bottom: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 70px;
+   justify-content: center;
+}
+.master .masterprogress:last-child{
+   
+   padding:15px 10px;
+   height: 85px;
+}
+.master .progress {
+   width: 100%;
+   -webkit-appearance: none;
+   appearance: none;
+   border: none;
+   border-radius: 10px;
+   height: .5rem;
+ }
+ 
+ .master .progress::-webkit-progress-bar {
+   background-color: black;
+  
+ }
+ 
+ .master .progress::-webkit-progress-bar,
+ .master .progress::-webkit-progress-value {
+   border-radius: 5px;
+ }
+ 
+ .master .progress::-moz-progress-bar {
+   border-radius: 10px;
+   
+ }
+ 
+ .master .progress1::-webkit-progress-value {
+   background: #ffc33a;
+  
+ }
+ 
+.master .progress2::-webkit-progress-value {
+   background: #34fb84;
+ }
+ 
+
+.master .masterprogress .info{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.master .masterprogress .info p{
+   font-size: 11px;
+   margin: 0;
+}
+.master .masterprogress .info .invest{
+color: #d84558;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span{
+color: #d84558;
+border-radius: 50%;
+border: 1px solid #d84558;
+display: block;
+width: 16px;
+height: 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span i{
+font-size: 8px;
+}
+.master .masterprogress:last-child .info{
+   color: #34fb84;
+  
+}
+.master .masterprogress:last-child .info p{
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+  
+}
+.master .masterprogress:last-child .info p span{
+   border: 1px solid #34fb84;
+   color: #34fb84;
+}
+ /* master */
+ /* secarchAddress */
+ .secarchAddress{
+   background-color: #241c31;
+   margin-top: 30px;
+   position: relative;
+   /* padding-bottom: 50px; */
+   overflow-x: hidden;
+   overflow-y: hidden;
+ }
+ .secarchAddress .content{
+padding-top: 30px;
+display: flex;
+flex-direction: column;
+gap: 30px;
+margin-bottom: 30px;
+ }
+ .secarchAddress .content input{
+width: 100%;
+padding:12px 10px;
+background-color: #181025;
+border: none;
+border-radius: 6px;
+ }
+ .secarchAddress .content input::placeholder{
+color: #8c8597;
+font-size: 12px;
+font-weight: 700;
+ }
+ .secarchAddress .boxcontain{
+   max-height: 600px;
+   overflow-y: auto;
+   min-height: 185px;
+   position: relative;
+ }
+ .secarchAddress .rondomLine{
+   display: block;
+   position: absolute;
+   width: 7%;
+   height: 1px;
+   background-color: white;
+   top: 70%;
+   left: calc(100% - 100% + 28px);
+ }
+ .secarchAddress .boxs{
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+  position: relative;
+  align-items: end;
+  overflow-x: auto;
+  width: 180%;
+  padding-left: 15px;
+
+ }
+
+ 
+ .secarchAddress .manBox{
+   display: flex;
+   justify-content: end;
+   align-items: center;
+  /* justify-content: space-between; */
+
+  /* gap: 5%; */
+  width: 100%;
+  /* overflow-x: auto; */
+ }
+ .secarchAddress .manBox .box{
+   background-color: #fdc53a;
+   display: flex;
+   flex-direction: column;
+padding: 10px;
+gap: 10px;
+border-radius: 7px;
+z-index: 112;
+width: 100%;
+/* overflow-x: auto; */
+ }
+ .secarchAddress .boxs .manBox .line{
+   width: 15%;
+   height: 1px;
+   background-color: white;
+   display: block;
+ }
+ 
+
+ .secarchAddress .manBox .direc{
+  width: 5%;
+   height: 18px;
+border: 1px dashed white;
+border-radius: 50%;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+padding:12px 10px;
+background-color: white;
+ }
+ .secarchAddress .manBox .direc::after{
+   content: "";
+   position: absolute;
+   width: 1px;
+   height: calc(100% - 30px);
+   background-color: white;
+   top: calc(100% - 100% + 53px);
+ }
+
+ .secarchAddress .manBox .direc i{
+ font-size: 13px;
+ color: #181025;
+ z-index: 112;
+ }
+ .secarchAddress .manBox .box p{
+   margin: 0;
+   font-size: 14px;
+   font-weight: 700;
+   width: 100%;
+   word-wrap:break-word ;
+ }
+ .secarchAddress .manBox .box .boxinfo{
+display: flex;
+justify-content: start;
+gap: 20px;
+align-items: baseline;
+text-transform: capitalize;
+/* width: 300px; */
+
+ }
+ .secarchAddress .manBox .box .boxinfo .info{
+  
+ }
+ .secarchAddress .manBox2{
+   /* margin-left: 25px; */
+   /* gap: 7%; */
+   width: 96%;
+ }
+ .secarchAddress .boxs .box2Cust{
+   width: calc(96% - 4% + 10px);
+ }
+ .secarchAddress .manBox2 .direc::after{
+   top:  calc(100% - 100% + 118px);
+   /* height: 20%; */
+   /* height:  calc(100% - 100% + 114px);; */
+   height:  calc(100% - 90px);
+   /* background-color: red; */
+ }
+
+
+ .secarchAddress .manBox2 .box{
+   background-color: #32fc84;
+   width: 100%;
+  
+ }
+
+ .secarchAddress .box2Cust .box{
+background-color: #b9afc8;
+width: 85%;
+ }
+ .secarchAddress .box2Cust .direc{
+height: 0;
+width: 0;
+border: none;
+ }
+
+ .secarchAddress .box2Cust .direc::after{
+  display: none;
+ }
+ .secarchAddress .manBox2  .dircgreen::after{
+   /* height: calc(100% - 240px); */
+   /* top: calc(100% - 100% + 240px); */
+   /* width: 10px; */
+  }
+ .secarchAddress .manBox3{
+ width: 85%;
+ }
+ .secarchAddress .manBox3 .box{
+   background-color: #32fc84;
+ width: 100%;
+ }
+ .secarchAddress .boxcustom3 .box{
+   background-color: #b9afc8;
+ }
+
+
+.secarchAddress .boxcustom3 .boxcustom3dir::after{
+
+   height:calc(100% - 350px);
+   top: calc(100% - 100% + 381px);
+}
+.secarchAddress .manBox3 .boxcustom4dir::after{
+display: none;
+   height: calc(100% - 100% + 40px);
+
+   top: calc(100% - 100% + 363px);
+}
+.secarchAddress .manBox3 .boxcustom5dir::before{
+   content: "";
+   width: 10%;
+   height: 1px;
+   background-color: white;
+   position: absolute;
+   left: calc(20% - 8px);
+
+
+}
+.secarchAddress .manBox3 .boxcustom5dir::after{
+   display: none;
+  
+   height: calc(100% - 100% + 40px);
+
+   top: calc(100% - 100% + 423px);
+}
+.secarchAddress .manBox3 .boxcustom6dir::after{
+   display: none;
+   
+   height: calc(100% - 100% + 40px);
+
+   top: calc(100% - 100% + 483px);
+}
+.secarchAddress .manBox3 .boxcustom7dir::after{
+   display: none;
+   height:calc(100% - 543px);
+
+   top: calc(100% - 100% + 543px);
+}
+
+
+/* openclass */
+.secarchAddress .rondomLine.open,.secarchAddress .rondomLine.open1,.secarchAddress .rondomLine.open2,.secarchAddress .rondomLine.open3,.secarchAddress .rondomLine.open4{
+   display: none;
+}
+
+.secarchAddress .manBox3 .boxcustom5dir.open::before,
+.secarchAddress .manBox3 .boxcustom5dir.open2::before
+.secarchAddress .manBox3 .boxcustom5dir.open3::before
+.secarchAddress .manBox3 .boxcustom5dir.open4::before
+
+
+{
+   display: none;
+}
+.secarchAddress .manBox.open{
+   display: none !important;
+ }
+ .secarchAddress .manBox .direc.open::after{
+   display: none !important;
+ }
+ .secarchAddress .firstMainBox .direc.open2::after{
+   bottom: -31.5%;
+ }
+ .secarchAddress .firstMainBox .direc.open3.open2::after{
+   bottom: -32.5%;
+   
+ }
+ .secarchAddress .manBox2 .direc.open2::after,.secarchAddress .manBox3 .direc.open2::after{
+   display: none !important;
+ }
+ .secarchAddress .manBox2.open2,.secarchAddress .manBox3.open2,.secarchAddress .manBox3.open4{
+   display: none !important;
+ }
+ .secarchAddress .manBox2 .direc.open2::after,
+  .secarchAddress .manBox3 .direc.open2::after,
+  .secarchAddress .manBox3 .direc.open3::after,
+  .secarchAddress .manBox3 .direc.open4::after
+  
+  {
+   display: none !important;
+ }
+
+ .secarchAddress .manBox2 .dircgreen.open3::after{
+ display: none !important;
+}
+ .secarchAddress .firstMainBox .direc.open3::after{
+   bottom: -15%;
+   
+}
+.secarchAddress .secondMainBox .direc.open4.open3::after{
+   top: 41%;
+   height: 45%;
+}
+ .secarchAddress .firstMainBox .direc.open4::after{
+   bottom: -13%;
+   
+}
+ .secarchAddress .firstMainBox .direc.open i, .secarchAddress .secondMainBox .direc.open2 i,.secarchAddress .secondMainBox2 .direc.open3 i,
+ .secarchAddress .secondMainBox3 .direc.open4 i
+ {
+transform: rotate(90deg);
+ }
+ .secarchAddress .manBox3.open3{
+   display: none !important;
+ }
+ .secarchAddress .manBox3 .direc.open3::after{
+   display: none !important;
+ }
+ .secarchAddress .secondMainBox .direc.open3::after{
+   top: 41.5%;
+   height: 44%;
+}
+ .secarchAddress .secondMainBox .direc.open4::after{
+   top: 33.5%;
+   height: 35%;
+
+}
+/* .secarchAddress .manBox2 .dircgreen.open4::after{
+   top: 74.5%;
+   height: 100%;
+  } */
+/* openclass */
+ /* secarchAddress */
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+@media (max-width:320px){
+   header .links li a.nav{
+   
+      font-size: 7px !important;
+     
+  }
+  header .links li.folder{
+    
+    
+      font-size: 7px !important;
+    
+  }
+  header .right .person{
+ gap: 0px;
+  }
+  header .right .person p{
+
+font-size: 7px !important;
+}
+}
+@media (min-width:370px){
+   header .right .personanimat{
+      width: 65px;
+   }
+   header .links li a.nav{
+      font-size: 12px;
+   }
+   header .links{
+      gap: 7px;
+   }
+   header .right .person p{
+      font-size: 10px;
+   }
+   header .links .folder .en {
+      font-size: 12.5px;
+      font-weight: 900;
+      padding: 4px 3px
+   }
+   
+   nav .content ul li a{
+      font-size: 13px;
+     
+   }
+   .annonce .content .text p {
+      font-size: 10px;
+   }
+   .annonce .content .social{
+      font-size: 13px;
+   }
+   .schema .head h2 {
+      font-size: 15px;
+      margin: 0;
+   }
+   table th {
+      font-size: 9px;
+   }
+   table td {
+      font-size: 11px;
+      
+   }
+   .Uschema .first span :last-child{
+      font-size: 8px;
+   }
+   .Uschema .date{
+      
+    text-align: end;
+    width: 100%;
+    padding-right: 15px;
+   }
+    /* master */
+ .master{
+   margin-top: 25px;
+}
+.master .content{
+   color: white;
+   
+}
+.master .head{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   text-transform: capitalize;
+}
+.master .head h3,.master .head p{
+   margin: 0;
+
+}
+
+.master .head h3{
+   /* font-size: 17px; */
+}
+.master .head h3 span{
+   color: #1fa15b;
+}
+.master .head p{
+   font-size: 14px;
+   margin-bottom: 10px;
+}
+.master .masterprogress{
+   background-color: #332941;
+   padding:10px;
+   border-radius: 8px;
+   margin-bottom: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 70px;
+   justify-content: center;
+}
+.master .masterprogress:last-child{
+   
+   padding:15px 10px;
+   height: 85px;
+}
+.master .progress {
+   width: 100%;
+   -webkit-appearance: none;
+   appearance: none;
+   border: none;
+   border-radius: 10px;
+   height: .5rem;
+ }
+ 
+ .master .progress::-webkit-progress-bar {
+   background-color: black;
+  
+ }
+ 
+ .master .progress::-webkit-progress-bar,
+ .master .progress::-webkit-progress-value {
+   border-radius: 5px;
+ }
+ 
+ .master .progress::-moz-progress-bar {
+   border-radius: 10px;
+   
+ }
+ 
+ .master .progress1::-webkit-progress-value {
+   background: #ffc33a;
+  
+ }
+ 
+.master .progress2::-webkit-progress-value {
+   background: #34fb84;
+ }
+ 
+
+.master .masterprogress .info{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.master .masterprogress .info p{
+   font-size: 12px;
+   margin: 0;
+}
+.master .masterprogress .info .invest{
+color: #d84558;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span{
+color: #d84558;
+border-radius: 50%;
+border: 1px solid #d84558;
+display: block;
+width: 16px;
+height: 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span i{
+font-size: 8px;
+}
+.master .masterprogress:last-child .info{
+   color: #34fb84;
+  
+}
+.master .masterprogress:last-child .info p{
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+  
+}
+.master .masterprogress:last-child .info p span{
+   border: 1px solid #34fb84;
+   color: #34fb84;
+}
+ /* master */
+ /* secarchAddress */
+ 
+
+ 
+ .secarchAddress .content input::placeholder{
+
+font-size: 15px;
+
+ }
+ .secarchAddress .boxs{
+   width: 155%;
+ }
+ .secarchAddress .manBox3 .boxcustom5dir::before{
+ 
+   left: calc(20% - 14px);
+
+}
+.secarchAddress .rondomLine{
+   left:calc(100% - 100% + 30px);
+   width: 6%;
+}
+
+}
+
+/* responsive */
+
+
