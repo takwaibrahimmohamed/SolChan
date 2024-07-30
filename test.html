@@ -1,132 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-<style>
-    #range1 {
-  -webkit-appearance: none;
-  appearance: none; 
-  width: 100%;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-#range1::-webkit-slider-runnable-track {
-  height: 15px;
-  background: #ccc;
-  border-radius: 16px;
-}
-
-#range1::-moz-range-track {
-  height: 15px;
-  background: #ccc;
-  border-radius: 16px;
-}
-
-#range1::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none; 
-  height: 15px;
-  width: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 2px solid #f50;
-  box-shadow: -407px 0 0 400px #f50;
-}
-
-#range1::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid #f50;
-  box-shadow: -407px 0 0 400px #f50;
-}
-
-
-/* range 2 */
-.range-input {
-  -webkit-appearance: none;
-  appearance: none; 
-  width: 100%;
-  cursor: pointer;
-  outline: none;
-  border-radius: 15px;
-  height: 6px;
-  background: #ccc;
-}
-
-.range-input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none; 
-  height: 15px;
-  width: 15px;
-  background-color: #f50;
-  border-radius: 50%;
-  border: none;
-  transition: .2s ease-in-out;
-}
-
-.range-input::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
-  background-color: #f50;
-  border-radius: 50%;
-  border: none;
-  transition: .2s ease-in-out;
-}
-
-.range-input::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
-}
-.range-input:active::-webkit-slider-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
-}
-.range-input:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
-}
-
-.range-input::-moz-range-thumb:hover {
-  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
-}
-.range-input:active::-moz-range-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
-}
-.range-input:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
-}
-
-
-
-
-</style>
 <body>
-    <div class="range">
-        <input type="range" min="0" max="50" value="10" id="range2" class="range-input" /> 
-        <div class="value2" style="display: none;"></div>
-      </div>
-      <script>
-        const sliderEl = document.querySelector("#range2")
-const sliderValue = document.querySelector(".value2")
-window.onload=()=>{
-    const progress = 20
-sliderEl.style.background=`linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`
-}
-sliderEl.addEventListener("input", (event) => {
-  const tempSliderValue = event.target.value; 
-  sliderValue.textContent = tempSliderValue;
-  
-   progress = (tempSliderValue / sliderEl.max) * 100;
- 
-  sliderEl.style.background = `linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`;
-})
+  <!DOCTYPE html>
+<html>
+<head>
+  <!-- <title>Confetti Button</title>
+  <style>
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style> -->
+</head>
+<body>
+  <div id="root"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-      </script>
+  <script>
+    const rootElement = document.getElementById('root');
+
+    const button = document.createElement('button');
+    button.classList.add('button');
+    button.addEventListener('click', () => {
+      confetti({
+        particleCount: 150,
+        spread: 60,
+        zIndex:115
+        // origin: {
+        //   x: button.offsetLeft + button.offsetWidth / 2,
+        //   y: button.offsetTop + button.offsetHeight / 2
+        // },
+        // colors: ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4caf50', '#8bc34a', '#cddc39', '#ffeb3b', '#ffc107', '#ff9800', '#ff5722']
+      });
+    });
+
+    const spanEmoji = document.createElement('span');
+    spanEmoji.textContent = '🎉';
+    button.appendChild(spanEmoji);
+
+    const spanText = document.createElement('span');
+    spanText.textContent = 'Like';
+    button.appendChild(spanText);
+
+    rootElement.appendChild(button);
+  </script>
+</body>
+</html>
 </body>
 </html>

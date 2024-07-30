@@ -300,6 +300,12 @@ text-transform: capitalize;
     text-align: center;
     text-transform: capitalize;
   }
+  .salespop .contentpop .res .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+  }
   .salespop .contentpop .resSol{
     display: flex;
     justify-content: center;

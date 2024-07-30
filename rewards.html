@@ -76,8 +76,8 @@
                                             <p>ear 2 stars in multiplayer battles against opponents in taitan league.</p>
                                            </div>
                                         </div>
-                                        <div class="res">
-                                            claim
+                                        <div class="res" id="root">
+                                            <!-- claim -->
                                         </div>
                                         <div class="resSol">
                                             <div class="imag"><img src="./images/cup.jpeg" alt="cup"></div>
@@ -160,4 +160,29 @@
        
        <script src="./js/main.js"></script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+  const rootElement = document.getElementById('root');
+
+  const button = document.createElement('div');
+  button.classList.add('button');
+  button.addEventListener('click', () => {
+    confetti({
+      particleCount: 150,
+      spread: 60,
+      zIndex:115
+    });
+  });
+
+  const spanEmoji = document.createElement('span');
+  spanEmoji.textContent = '🎉';
+  button.appendChild(spanEmoji);
+
+  const spanText = document.createElement('span');
+  spanText.textContent = 'claim';
+  button.appendChild(spanText);
+
+  rootElement.appendChild(button);
+</script>
 </html>
