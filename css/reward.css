@@ -162,13 +162,16 @@ margin: 0;
 .surpric .boxsale .MainBox .gambox .info{
 color: white;
 background-color: #4f455e;
-font-size: 9.5px;
+font-size: 8.5px;
 font-weight: 600;
 border-radius: 5px;
 text-transform: capitalize;
 padding:4px 1px;
 width: 100%;
 text-align: center;
+  }
+  .surpric .boxsale .MainBox .gambox .info a{
+    color: white;
   }
 .surpric .boxsale .MainBox .gambox .active_1{
 background-color: #f1c51a;
@@ -177,23 +180,59 @@ background-color: #f1c51a;
 background-color: #08cc6a;
 border: 1px solid white;
   }
-  .sales{
-    margin-top: 20px;
-    background-color: #322a3f;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    padding-top: 50px;
+
+
+  .surpric .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 113;
   }
-  .sales .content{
+  .surpric .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .surpric .popup {
+    margin: 70px auto;
+    padding: 40px 10px;
+    background-color: #322a3f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    transition: all 2s ease-in-out;
+    /* height: 55%; */
+    top: 45%;
+    transform: translateY(-50%);
+   
+  }
+  .surpric .popup .close {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #eee;
+  }
+
+  .salespop .contentpop{
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 20px 10px;
     position: relative;
     z-index: 11;
+    overflow: auto;
   }
 
-  .sales .content .box{
+  .salespop .contentpop .boxpop{
    
     border: 1.5px solid;
 text-transform: capitalize;
@@ -202,7 +241,7 @@ text-transform: capitalize;
  border-radius: 10px;
  background-color: #433b52;
   }
-  .sales .content .box .inset{
+  .salespop .contentpop .boxpop .inset{
  /* box-shadow: 0px 4px 0px red; */
  background-color: #4f455e;
  padding: 15px 0px;
@@ -214,7 +253,7 @@ text-transform: capitalize;
  border-bottom-left-radius: 14px;
  border-bottom-right-radius: 14px;
   }
-  .sales .content .box::before{
+  .salespop .contentpop .boxpop::before{
         content: "";
         position: absolute;
         width: 100%;
@@ -227,7 +266,7 @@ text-transform: capitalize;
   left: 50%;
   transform: translateX(-50%);
   }
-  .sales .content .box h3{
+  .salespop .contentpop .boxpop h3{
    
     text-align: center;
     color: white;
@@ -236,7 +275,7 @@ text-transform: capitalize;
     border-bottom: 1.5px solid black;
     padding-bottom: 5px;
   }
-  .sales .content .box p{
+  .salespop .contentpop .boxpop p{
    
     text-align: center;
     color: #aeabb6;
@@ -244,12 +283,12 @@ text-transform: capitalize;
     padding: 0 20px;
    padding-top: 10px;
   }
-  .sales .content .box p,
-  .sales .content .box h3,
-  .sales .content .box h2{
+  .salespop .contentpop .boxpop p,
+  .salespop .contentpop .boxpop h3,
+  .salespop .contentpop .boxpop h2{
    margin: 0;
   }
-  .sales .content .res{
+  .salespop .contentpop .res{
     font-size: 27px;
     background-color: #08cc6a;
     font-weight: 900;
@@ -261,24 +300,27 @@ text-transform: capitalize;
     text-align: center;
     text-transform: capitalize;
   }
-  .sales .content .resSol{
+  .salespop .contentpop .resSol{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
-  .sales .content .resSol .imag{
+  .salespop .contentpop .resSol .imag{
 width: 50px;
 height: 50px;
 
   }
-  .sales .content .resSol .imag img{
+  .salespop .contentpop .resSol .imag img{
 width: 100%;
 height: 100%;
 
   }
-  .sales .content .resSol .info{
+  .salespop .contentpop .resSol .infopop{
 color: #f1c51a;
 font-weight: 900;
 font-size: 34px;
+margin: 0;
   }
+
+
