@@ -6,319 +6,127 @@
     <title>Document</title>
 </head>
 <style>
-    body{
-        background-color: black;
-    }
-.boxs{
-max-width: 400px;
-overflow-x: auto;
-display: flex;
-flex-direction: column;
-gap: 10px;
-align-items: end;
+    #range1 {
+  -webkit-appearance: none;
+  appearance: none; 
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 16px;
 }
-.manBox{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-  
-}
-.line{
-    width: 100%;
-    height: 1px;
-    background-color: white;
-}
-.direc{
-    width: 18px;
-   height: 18px;
-border: 1px dashed white;
-border-radius: 50%;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px;
-}
-.box{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    border-radius: 6px;
-    padding: 0 10px;
-    
-}
-.boxinfo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.box p{
-    font-size: 10px;
 
+#range1::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #ccc;
+  border-radius: 16px;
 }
+
+#range1::-moz-range-track {
+  height: 15px;
+  background: #ccc;
+  border-radius: 16px;
+}
+
+#range1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #f50;
+  box-shadow: -407px 0 0 400px #f50;
+}
+
+#range1::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #f50;
+  box-shadow: -407px 0 0 400px #f50;
+}
+
+
+/* range 2 */
+.range-input {
+  -webkit-appearance: none;
+  appearance: none; 
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 6px;
+  background: #ccc;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 15px;
+  width: 15px;
+  background-color: #f50;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+.range-input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #f50;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+.range-input::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+}
+.range-input:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+.range-input:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+
+.range-input::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+}
+.range-input:active::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+.range-input:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
+}
+
+
+
+
 </style>
 <body>
-    <div class="boxs">
-        <div class="manBox firstMainBox">
-             <p class="direc"><i class="fas fa-chevron-down"></i></p>
-             <p class="line"></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div> 
-        <div class="manBox firstMainBox">
-             <p class="direc"><i class="fas fa-chevron-down"></i></p>
-             <p class="line"></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div> 
-       
-       <!-- <div class="manBox manBox2 secondMainBox">
-             <p class="direc"><i class="fas fa-chevron-down"></i></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>
-         <div class="manBox manBox2 box2Cust">
-             <p class="direc"></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>
-         <div class="manBox manBox2 secondMainBox2">
-             <p class="direc dircgreen"><i class="fas fa-chevron-down"></i></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>
-         <div class="manBox manBox3 boxcustom3 secondMainBox">
-             <p class="direc boxcustom3dir"><i class="fas fa-chevron-down"></i></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>
-         <div class="manBox manBox3">
-             <p class="direc boxcustom4dir"><i class="fas fa-chevron-right"></i></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>
-         <div class="manBox manBox3">
-             <p class="direc boxcustom5dir"><i class="fas fa-chevron-right"></i></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>
-         <div class="manBox manBox3 boxcustom3">
-             <p class="direc boxcustom6dir"><i class="fas fa-chevron-right"></i></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>
-         <div class="manBox manBox3">
-             <p class="direc boxcustom7dir"><i class="fas fa-chevron-right"></i></p>
-             <div class="box">
-                 <p>0x9FCknxSsLfFDzFdn75Xgqx95sDp38inxSsLfFDzFdn75X</p>
-                 <div class="boxinfo">
-                     <div class="info">
-                         <p>level</p>
-                         <p>sharar</p>
-                     </div>
-                     <div class="info">
-                         <p>revenue</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>invested : $</p>
-                         <p>0.0</p>
-                     </div>
-                     <div class="info">
-                         <p>created: </p>
-                         <p>14.45</p>
-                     </div>
-                 </div>
-             </div>
-             
-         </div>  -->
-     </div>
-
-   </body>
-
-
-    <script>
+    <div class="range">
+        <input type="range" min="0" max="50" value="10" id="range2" class="range-input" /> 
+        <div class="value2" style="display: none;"></div>
+      </div>
+      <script>
+        const sliderEl = document.querySelector("#range2")
+const sliderValue = document.querySelector(".value2")
+window.onload=()=>{
+    const progress = 20
+sliderEl.style.background=`linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`
+}
+sliderEl.addEventListener("input", (event) => {
+  const tempSliderValue = event.target.value; 
+  sliderValue.textContent = tempSliderValue;
   
-    </script>
+   progress = (tempSliderValue / sliderEl.max) * 100;
+ 
+  sliderEl.style.background = `linear-gradient(to right, #f50 ${progress}%, #ccc ${progress}%)`;
+})
+
+
+      </script>
 </body>
 </html>

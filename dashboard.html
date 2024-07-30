@@ -20,7 +20,7 @@
                         invest
                     </a></li>
                     <li><a href="swap.html" class="nav">trade</a></li>
-                    <li><a href="#" class="nav">rewards</a></li>
+                    <li><a href="rewards.html" class="nav">rewards</a></li>
                     <li><a href="#" class="nav">l.pad</a></li>
                    
                 </ul>
@@ -78,6 +78,59 @@
                     <p class="profText">wallet balance</p>
                     <h3 class="profhead">5.0 SOL</h3>
                     <p class="profText">=$855.75</p>
+                    <a class="calcBtn"  href="#popup1">
+                        <i class="fas fa-calculator"></i>
+                        calculator
+                       
+                    </a>
+                    <div id="popup1" class="overlay">
+                        <div class="popup">
+                            <a class="close" href="#">&times;</a>
+                           <div class="popupcontent">
+                            <div class="pophead">
+                                <p class="text">calculator of solana farming income</p>
+                                <p class="price">APR 2.59%</p>
+                            </div>
+                           
+                            <div class="dollPrice">
+                                <P>I want to invest</P>
+                               <div class="info">
+                                <h5>100</h5>
+                                <p>$</p>
+                               </div>
+                            </div>
+                            <div class="investment">
+                                <p><img src="./images/logo.png" alt="">
+                                <span>50% investment in solana</span>
+                                </p>
+                                <h5>0.75 Sol</h5>
+                                
+                            </div>
+                            <div class="investment">
+                                <p><img src="./images/logo.png" alt="">
+                                <span>50% investment in USDT</span>
+                                </p>
+                                <h5>50 USDT</h5>
+                                
+                            </div>
+                            <div class="range">
+                                <input type="range" min="0" max="50" value="10" id="range2" class="range-input" /> 
+                                <div class="value2" style="display: none;">10</div>
+                              </div>
+                           
+                            <div class="dollProfit">
+                                <P>your profit</P>
+                               <div class="info">
+                                <h3>10.80 SOL</h3>
+                                <h3>1500.80 USDT</h3>
+                                
+                               </div>
+                            </div>
+                           </div>
+                          
+                           
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -312,5 +365,22 @@
       
        <!-- <script src="./js/animat.js"></script> -->
        <script src="./js/main.js"></script>
+       <script>
+              const sliderEl = document.querySelector("#range2")
+const sliderValue = document.querySelector(".value2")
+window.onload=()=>{
+    const progress = 20
+sliderEl.style.background=`linear-gradient(to right, #56c327 ${progress}%, #332941 ${progress}%)`
+}
+sliderEl.addEventListener("input", (event) => {
+  const tempSliderValue = event.target.value; 
+  sliderValue.textContent = tempSliderValue;
+  
+   progress = (tempSliderValue / sliderEl.max) * 100;
+ 
+  sliderEl.style.background = `linear-gradient(to right, #56c327 ${progress}%, #332941 ${progress}%)`;
+})
+
+       </script>
 </body>
 </html>

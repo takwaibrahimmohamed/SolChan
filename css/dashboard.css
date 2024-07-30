@@ -50,6 +50,203 @@ font-size: 12px;
 color: white;
 font-weight: 900;
 }
+.DashProfit .calcBtn{
+  text-transform: capitalize;
+  background-color: #332941;
+  font-size: 10px;
+  border-radius: 5px;
+  padding: 3px 10px;
+  cursor: pointer;
+  color: white !important;
+}
+.DashProfit .calcBtn i{
+  background-color: #181025;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.DashProfit .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 113;
+}
+.DashProfit .overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.DashProfit .popup {
+  margin: 70px auto;
+  padding: 20px 10px;
+  background-color: rgba(36,28,49,255);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+  transition: all 2s ease-in-out;
+  /* height: 55%; */
+  top: 45%;
+  transform: translateY(-50%);
+ 
+}
+.DashProfit .popup .close {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #eee;
+}
+.DashProfit .popup .popupcontent {
+ display: flex;
+ flex-direction: column;
+gap: 10px;
+color: white;
+
+  overflow: auto;
+}
+.DashProfit .popup .popupcontent h5,
+.DashProfit .popup .popupcontent p
+{
+  margin: 0;
+}
+.DashProfit .popup .popupcontent .pophead{
+ display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 10px;
+}
+.DashProfit .popup .popupcontent .pophead p{
+font-size: 11px;
+
+}
+.DashProfit .popup .popupcontent .pophead .price{
+background-color: #56c327;
+border-radius: 10px;
+padding: 2px 7px;
+font-size: 8px;
+
+}
+.DashProfit .popup .popupcontent .investment p{
+display: flex;
+align-items: center;
+}
+.DashProfit .popup .popupcontent img{
+  width: 15px;
+  height: 15px;
+}
+.DashProfit .popup .popupcontent .dollPrice{
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.DashProfit .popup .popupcontent .dollPrice .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #332941;
+  padding:7px 10px;
+  border-radius: 8px;
+ 
+}
+.DashProfit .popup .popupcontent .dollPrice .info h5{
+  font-size: 12px;
+}
+.DashProfit .popup .popupcontent .dollPrice .info p{
+color: #8d94fc;
+background-color: white;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+line-height: 15px;
+text-align: center;
+}
+
+.popup .range-input{
+  -webkit-appearance: none;
+  appearance: none; 
+  width: 98%;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 6px;
+  background: #332941;
+}
+
+.popup .range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 15px;
+  width: 15px;
+  background-color: #56c327;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+.popup .range-input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #56c327;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+.popup .range-input::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+}
+.popup .range-input:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+.popup .range-input:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+
+.popup .range-input::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+}
+.popup .range-input:active::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+}
+.popup .range-input:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
+}
+
+
+ 
+
+.DashProfit .popup .popupcontent .investment,
+.DashProfit .popup .popupcontent .dollProfit .info
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 11px;
+}
+.DashProfit .popup .popupcontent .dollProfit{
+  font-size: 11px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.DashProfit .popup .popupcontent .dollProfit .info{
+  font-size: 11px;
+  background-color: #7233fe;
+  font-weight: 900;
+  padding: 5px 7px;
+  border-radius: 7px;
+}
 .DashProfit .wither .btnWither{
 background-color: #7603ff;
 border: none;
