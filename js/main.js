@@ -1,3 +1,19 @@
+
+
+const langug = document.querySelector(" header .links .lang .en")
+const selctLang = document.querySelector("  header .links .lang .selctLang")
+const closselect = document.querySelector(" header .links .closselect")
+
+langug.addEventListener("click", ()=>{
+ selctLang.style.display = "flex"
+
+})
+closselect.addEventListener("click", ()=>{
+ selctLang.style.display = "none"
+ 
+})
+
+
 text2 = '50.450k';  // The message displayed
 chars2 = '0123456789.k';  // All possible Characters
 scale2 = 9;  // Font size and overall scale
@@ -74,6 +90,7 @@ requestAnimationFrame(loop2 = function(){
   requestAnimationFrame(loop2);
 });
 // console.log(document.querySelectorAll("canvas")[1].className=="canv2")
+
 
 ////////////////////////
 if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("canvas")[1].className=="canv2" && document.querySelectorAll("canvas")[1]!==undefined){
@@ -291,6 +308,7 @@ mainbox[1].addEventListener("click",toggle1)
 mainbox[3].addEventListener("click",toggle2)
 mainbox[4].addEventListener("click",toggle3)
 // console.log(mainbox)
+
 
 
 

@@ -21,6 +21,7 @@ body{
     background-color: #181025;
     margin: 0;
     padding: 0;
+    position: relative;
    
 }
 ul{
@@ -163,6 +164,84 @@ header .links .folder a{
 header .links .folder .en{
     background-color: #241c31;
    
+ }
+ header .links .lang{
+  
+ }
+ header .links .lang .selctLang{
+   background-color: #241c31;
+  position: absolute;
+  z-index: 114;
+  display: none;
+right: 0%;
+  
+  flex-direction: column;
+  padding:15px 10px;
+  border-radius: 10px;
+
+gap: 7px;
+  width: 80%;
+}
+header .links .lang .selctLang h3,header .links .lang .selctLang p{
+margin: 0;
+}
+header .links .lang .selctLang .selecthead{
+display: flex;
+flex-direction: column;
+font-size: 12px;
+line-height: 10px;
+gap: 10px;
+text-transform: capitalize;
+}
+
+header .links .lang .selctLang .textselct{
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-transform: uppercase;
+}
+
+
+
+ header .links .lang .selctLang .selecthead .SelctLang{
+   font-size: 8px;
+   color: #91899e;
+ }
+ header .links .lang .selctLang .targetlang{
+  background-color: #332941;
+  border-radius: 6px;
+ }
+ header .links .lang .selctLang .alllang{
+ display: flex;
+ flex-direction: column;
+ gap: 7px;
+ }
+ header .links .lang .selctLang .targetlang{
+  background-color: #332941;
+  border-radius: 6px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 10px;
+  text-transform: capitalize;
+ }
+ header .links .lang .selctLang .targetlang img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+ }
+ header .links .lang .selctLang .savelang{
+ background-color: #7603ff;
+ border-radius: 10px;
+ padding:8px 10px;
+ width: 100%;
+ text-transform: uppercase;
+ border: none;
+ color: white;
+ margin: 10px auto;
+ margin-top: 30px;
  }
 
  /* start nav  */
@@ -877,7 +956,7 @@ font-size: 7px !important;
       width: 65px;
    }
    header .links li a.nav{
-      font-size: 12px;
+      font-size: 11px;
    }
    header .links{
       gap: 7px;
